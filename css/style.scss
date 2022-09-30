@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-section{
-	padding: 7em 0;
+	padding:  0;
 }
 
 .ftco-no-pt{
@@ -263,16 +263,16 @@ h1, h2, h3, h4, h5,
 		color: rgba(0,0,0,.7) !important;
 		font-size: 14px;
 		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-		  color: rgba(0,0,0,.7) !important;
+			color: rgba(0,0,0,.7) !important;
 		}
 		&::-moz-placeholder { /* Firefox 19+ */
-		  color: rgba(0,0,0,.7) !important;
+			color: rgba(0,0,0,.7) !important;
 		}
 		&:-ms-input-placeholder { /* IE 0+ */
-		  color: rgba(0,0,0,.7) !important;
+			color: rgba(0,0,0,.7) !important;
 		}
 		&:-moz-placeholder { /* Firefox 18- */
-		  color: rgba(0,0,0,.7) !important;
+			color: rgba(0,0,0,.7) !important;
 		}
 	}
 	.search{
