@@ -2,7 +2,41 @@
   width: 80px;
 }
 
+#carrito {
+  margin-left: 5rem;
+}
+
 .login {
   list-style: none;
   float: right;
+}
+
+.btn-primary {
+  margin: 10px;
+}
+
+.card {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.mb-4, .my-4 {
+  padding-top: 1.5rem !important;
+}
+
+#footer {
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  #login {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 425px) {
+  #login {
+    margin-left: 0px;
+  }
 }/*# sourceMappingURL=style2.css.map */

@@ -36,7 +36,7 @@ $(document).ready(function(){
 		}
 	});
 	//Mostrar login
-	$('.btn-login').on('click', function(e){
+	$('#login').on('click', function(e){
 		e.preventDefault();
 		var login=$('.Login');
 		if(login.css('opacity')=="0"){
@@ -46,3 +46,5 @@ $(document).ready(function(){
 		}
 	});
 });
+
+
