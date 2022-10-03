@@ -37,12 +37,201 @@
     margin-top: 50px;
 }
 
-//media querys
+/*== Box Login ==*/
+.ShowBox{
+	opacity: 1 !important;
+	pointer-events: auto !important;
+}
+
+/*== Login ==*/
+#login{
+    margin-left: 160px;
+}
+
+.Login{
+    right: 1;
+    z-index: 77;
+    background: #fff;
+    color: black;
+    text-transform: none;
+    line-height: normal;
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    a{
+        text-decoration: none;
+        line-height: auto;
+        text-align: center;
+        display: block;
+    }
+}
+
+
+/*== banner ==*/
+.banner{
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 50px);
+	background-color: #F5F5F5;
+	background-size: cover;
+	background-position: center;
+	transition: all .1s ease-out;
+	background-image: url("../assets/img/slide1.jpg");
+	animation: banner 19s infinite linear;
+}
+.banner-content{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: white;
+	background-color: rgba(0, 0, 0, .6);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    h1{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
+        font-size: 65px;
+        text-align: center;
+        color: white;
+        font-family: 'Kanit', sans-serif;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 9px 20px;
+        border: 1px solid #FFF;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out;
+        &:hover{
+            background-color: #fff;
+            color: #333;
+        }
+    }
+}
+
+@keyframes banner{
+	0%{
+		background-image: url("../assets/img/slide1.jpg");
+	}
+	25%{
+		background-image: url("../assets/img/slide1.jpg");
+	}
+
+
+	26%{
+		background-image: url("../assets/img/slide2.jpg");
+	}
+	50%{
+		background-image: url("../assets/img/slide2.jpg");
+	}
+
+
+	51%{
+		background-image: url("../assets/img/slide3.png");
+	}
+	75%{
+		background-image: url('../assets/img/slide3.png');
+	}
+	
+
+	76%{
+		background-image: url("../assets/img/slide4.jpg");
+	}
+	100%{
+		background-image: url("../assets/img/slide4.jpg");
+	}
+
+}
+
+/*=======================================================================================================
+=                                        Media queries                                                  =
+========================================================================================================*/
+/* col-xs */
+@media (max-width: 767px) {
+	.NoScroll{
+		overflow-y: hidden;
+	}
+    
+    .btn-menuMobile{
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        color: #fff;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        line-height: 50px;
+        font-size: 25px;
+        transition: all .3s ease-in-out;
+        &:hover{
+            color: #FAE76F;
+        }   
+    }
+    
+    .Login{
+        position: fixed;
+        height: 100%;
+        top: 0;
+        padding-top: 50px;
+        z-index: 100;
+    }
+}
+
+/* col-sm */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+/* col-md */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+/* col-lg */
+@media (min-width: 1200px) {
+    
+}
+
+/*col-sm col-md col-lg*/
 @media (min-width: 768px) {
     #login{
         margin-left: 0px;
     }
-
+	.Login{
+		border: 1px solid #E1E1E1;
+		position: absolute;
+		width: 250px;
+	}
+    .Login::after,
+	.Login::before {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	.Login::after {
+		border-color: rgba(136, 183, 213, 0);
+		border-bottom-color: #fff;
+		border-width: 11px;
+		margin-right: 0px;
+	}
+	.Login::before {
+		border-color: rgba(194, 225, 245, 0);
+		border-bottom-color: #E1E1E1;
+		border-width: 12px;
+		margin-right: -2px;
+	}
 }
 
 @media (min-width: 425px){
