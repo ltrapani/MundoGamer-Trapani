@@ -19,18 +19,21 @@ function calcularPrecio(){
             alert("Su viaje a Paris se ha añadido al carrito");
             precioViaje = 270000;
             alert("El precio total a abonar es de "+precioTotal(precioViaje, cantidadPasajes));
+            ingresarPasajes();
         break;
 
         case 2:
             alert("Su viaje a New York se ha añadido al carrito");
             precioViaje = 310000;
             alert("El precio total a abonar es de "+precioTotal(precioViaje, cantidadPasajes));
+            ingresarPasajes();
         break;
 
         case 3:
             alert("Su viaje a Buenos Aires se ha añadido al carrito");
             precioViaje = 75000;
             alert("El precio total a abonar es de "+precioTotal(precioViaje, cantidadPasajes));
+            ingresarPasajes();
         break;
         default:
             alert("El numero ingresado es incorrecto, pruebe de nuevo mas tarde");
@@ -39,4 +42,4 @@ function calcularPrecio(){
 }
 
 calcularPrecio();
-ingresarPasajes();
+
