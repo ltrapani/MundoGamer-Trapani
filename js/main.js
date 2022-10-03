@@ -1,6 +1,6 @@
 let precioViaje = 0;
-let viajeElegido = parseInt(prompt("Ingrese el numero de destino que desea abonar:\n1.Paris\n2.New York\n3.Buenos Aires"));
-let cantidadPasajes = parseInt(prompt("Ingrese la cantidad de pasajes que desea: "));
+let viajeElegido = parseInt(prompt("Ingrese el numero de destino al que desea viajar:\n1.Paris\n2.New York\n3.Buenos Aires"));
+let cantidadPasajes = parseInt(prompt("Ingrese la cantidad de pasajes que va a abonar: "));
 
 const precioTotal = (precioViaje, cantidadPasajes) => {return precioViaje*cantidadPasajes}
 
@@ -36,7 +36,7 @@ function calcularPrecio(){
             ingresarPasajes();
         break;
         default:
-            alert("El numero ingresado es incorrecto, pruebe de nuevo mas tarde");
+            alert("Error, verifique ingresar correctamente el numero de destino al que desea viajar");
         break;
     }
 }
