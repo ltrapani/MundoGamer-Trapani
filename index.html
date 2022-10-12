@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 	<head>
-	<title>Home • Rumbo a Qatar</title>
+	<title>Home • Mundo gamer</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Icon -->
@@ -42,15 +42,8 @@
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 			<div class="container">
 				<!-- logo -->
-				<div class="logo-qatar"><img src="./assets/img/LogoQatar.png" alt="logomundialqatar"></div>
-				<a class="navbar-brand" href="#"><span>Rumbo a</span>Qatar</a>
-				<!-- search -->
-				<!-- <form action="#" class="searchform order-sm-start order-lg-last">
-					<div class="form-group d-flex">
-						<input type="text" class="form-control pl-3" placeholder="Buscar">
-						<button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-					</div>
-				</form> -->
+				<div class="logo"><img src="./assets/img/rumboario.png" alt="logomundialqatar"></div>
+				<a class="navbar-brand" href="#"><span>Mundo</span>Gamer</a>
 
 				<!-- menu desplegable -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +58,7 @@
 						<li class="nav-item">
 							<a href="#" id="login" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> Log In</a>
 							<!-- showbox login desplegable -->
-							<div class="full-width Login">
+							<div class="full-width Login" id="boxlogin">
 								<p class="text-center">
 									<form action="">
 										<div class="form-group">
@@ -79,8 +72,8 @@
 										<a href="#!">No recuerdo mi contraseña</a>
 										<br>
 										<p class="text-center">
-											<a href="#!" class="btn btn-danger btn-login" style="display:inline-block !important;">CANCELAR</a>
-											<button type="submit" class="btn btn-primary">INICIAR SESIÓN</button>
+											<a href="#" class="btn btn-danger btn-login" id="cancelar" style="display:inline-block !important;">CANCELAR</a>
+											<button type="reset" class="btn btn-primary" onclick="capturarUsuario();">INICIAR SESIÓN</button>
 										</p>
 									</form>
 									<hr>
@@ -101,7 +94,7 @@
 	<!--carousel-->
 	<section class="banner">
 		<div class="banner-content">
-			<h1>Viaja de la mejor forma</h1>
+			<h1>Juga de la mejor forma</h1>
 			<a href="#">Conocenos</a>	
 		</div>
 	</section>
@@ -114,8 +107,9 @@
 			<div class="card">
 				<img class="card-img-top" src="./assets/img/card1.jpg" alt="Card image cap">
 				<div class="card-body">
-					<h5 class="card-title">Viaje 1</h5>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<h5 class="card-title">Teclado gamer HyperX Alloy Origins</h5>
+					<p class="card-price">$12000</p>
+					<p class="card-text">El HyperX Alloy Origins™ Core es un teclado tenkeyless ultra compacto y robusto que cuenta con interruptores mecánicos diseñados para brindarles a los gamers la mejor combinación de estilo, rendimiento y confiabilidad. </p>
 					<a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
 				</div>
 				<div class="card-footer">
@@ -126,8 +120,9 @@
 			<div class="card">
 				<img class="card-img-top" src="./assets/img/card2.jpg" alt="Card image cap">
 				<div class="card-body">
-					<h5 class="card-title">Viaje 2</h5>
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					<h5 class="card-title">Monitor 25 Pulgadas Benq Zowie Xl2546k 240hz</h5>
+					<p class="card-price">$67000</p>
+					<p class="card-text">Disfrutá de todas las cualidades que el monitor BenQ XL2546K tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina.</p>
 					<a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
 				</div>
 				<div class="card-footer">
@@ -138,8 +133,9 @@
 			<div class="card">
 				<img class="card-img-top" src="./assets/img/card3.jpg" alt="Card image cap">
 				<div class="card-body">
-					<h5 class="card-title">Viaje 3</h5>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+					<h5 class="card-title">MICROPROCESADOR INTEL CORE I5 10600K 4.8GHZ</h5>
+					<p class="card-price">$56000</p>
+					<p class="card-text">Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.</p>
 					<a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
 				</div>
 				<div class="card-footer">
@@ -166,7 +162,7 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
-			<a class="text-white" href="#">Rumbo a Qatar</a>
+			<a class="text-white" href="#">MundoGamer</a>
         </div>
     </footer>
 
