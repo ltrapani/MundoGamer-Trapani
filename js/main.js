@@ -146,3 +146,55 @@ function deslogearUsuario(){
 }
 
 realizarPedido();
+
+const carritoContenido = document.getElementById("carritoContenido")
+const verCarrito = document.getElementById("verCarrito");
+const pushbarContainer = document.getElementById("pushbar-container")
+
+let carrito = []
+
+productos.forEach((producto)=>{
+    let content = document.createElement("div");
+    content.className= "card"
+    content.innerHTML = `
+    <img class="card-img-top" src="${producto.img}">
+        <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-price">${producto.precio}</p>
+            <p class="card-text">${producto.descripcion}</p>
+    `;
+
+    carritoContenido.append(content)
+
+    let comprar = document.createElement("button");
+    comprar.className = "btn btn-outline-primary";
+    comprar.innerText = "Agregar al carrito" ;
+    content.append(comprar);
+
+    let descuento = document.createElement("div");
+    descuento.className = "card-footer";
+    descuento.innerHTML = `
+        <small >${producto.descuento}</small>
+    `;
+    content.append(descuento)
+
+    comprar.addEventListener("click", () =>{
+        carrito.push({
+            id : producto.id,
+            img: producto.img,
+            nombre: producto.nombre,
+            precio: producto.precio,
+        })
+        console.log(carrito)
+    })
+})
+
+verCarrito.addEventListener("click", () =>{
+    const pushbar = document.createElement("div");
+    pushbar.className = "pushbar-carrito-header"
+    pushbar.innerHTML = `
+    <h2 class="carrito-titulo">Carrito de compras</h2>
+    `;
+    console.log("hola")
+    pushbarContainer.append(pushbar)
+})

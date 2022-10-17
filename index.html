@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<!-- Css -->
+	<link rel="stylesheet" href="./css/pushbar.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/style2.css">
 	</head>
@@ -82,8 +83,17 @@
 								</p>
 							</div>
 						</li>
+
 						<!-- carrito -->
-						<li class="nav-item" id="carrito"><a href="" class="nav-link"><i class="bi bi-cart-dash-fill"></i></a></li>
+						<li class="nav-item" id="verCarrito">
+							<div data-pushbar-id="pushbar-carrito" data-pushbar-direction="right" class="pushbar-carrito"><a href="" class="nav-link"></a>
+								<div id="pushbar-container">
+									<button data-pushbar-close class="btn-cerrar"><i class="bi bi-backspace"></i></button>
+								</div>	
+							</div>
+							<button data-pushbar-target="pushbar-carrito" class="icon-carrito"><i class="bi bi-cart-dash-fill"></i>
+						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -100,48 +110,10 @@
 	</section>
 	<!-- FINAL carousel -->
 
-	<!-- Tarjetas -->
+	<!-- Cards -->
 	<section id="catalogo">
-		<div class="card-deck">
-			<!-- Tarjeta 1 -->
-			<div class="card">
-				<img class="card-img-top" src="./assets/img/card1.jpg" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Teclado gamer HyperX Alloy Origins</h5>
-					<p class="card-price">$12000</p>
-					<p class="card-text">El HyperX Alloy Origins™ Core es un teclado tenkeyless ultra compacto y robusto que cuenta con interruptores mecánicos diseñados para brindarles a los gamers la mejor combinación de estilo, rendimiento y confiabilidad. </p>
-					<a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">Paga un 21% en un solo pago o solo un 30% mas en 6 cuotas sin interes</small>
-				</div>
-			</div>
-			<!-- Tarjeta 2 -->
-			<div class="card">
-				<img class="card-img-top" src="./assets/img/card2.jpg" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Monitor 25 Pulgadas Benq Zowie Xl2546k 240hz</h5>
-					<p class="card-price">$67000</p>
-					<p class="card-text">Disfrutá de todas las cualidades que el monitor BenQ XL2546K tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina.</p>
-					<a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">Descuentos con Lemoncard</small>
-				</div>
-			</div>
-			<!-- Tarjeta 3 -->
-			<div class="card">
-				<img class="card-img-top" src="./assets/img/card3.jpg" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">MICROPROCESADOR INTEL CORE I5 10600K 4.8GHZ</h5>
-					<p class="card-price">$56000</p>
-					<p class="card-text">Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.</p>
-					<a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">Descuentos con Santander Rio y SmartBank</small>
-				</div>
-			</div>
+		<div id="carritoContenido" class="card-deck">
+			<!-- cards creadas en js -->
 		</div>
 	</section>
 
@@ -169,7 +141,16 @@
 	<script src="./css/js-diseño/jquery.min.js"></script>
 	<script src="./css/js-diseño/bootstrap.min.js"></script>
 	<script src="./css/js-diseño/main.js"></script>
+	<script src="./js/pushbar.js"></script>
+	<script src="./js/productos.js"></script>
 	<script src="./js/main.js"></script>
+	
+	<script>
+		var pushbar = new Pushbar({
+			blur: false,
+			overlay:false
+		});
+	</script>
 	</body>
 </html>
 

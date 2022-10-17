@@ -263,3 +263,41 @@ h5{
         margin-left: 0px;
     }
 }
+
+.pushbar{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.btn-cerrar.izquierda{
+    text-align: left;
+}
+
+.pushbar.btn-cerrar button{
+    background: none;
+    color: blue($color: #e30808)!important;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.pushbar-carrito{
+    background-color: rgb(242, 242, 242);
+    width: 465px!important;
+    font-size: 18px;
+    font-weight: 300px;
+}
+
+//carrito pushbar
+.carrito-titulo{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon-carrito{
+    margin-top: 25px;
+    border-width: 0px!important;
+}
+
