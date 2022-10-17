@@ -145,7 +145,6 @@ function deslogearUsuario(){
     logear.innerText = "Log in";
 }
 
-realizarPedido();
 
 const carritoContenido = document.getElementById("carritoContenido")
 const verCarrito = document.getElementById("verCarrito");
@@ -198,3 +197,5 @@ verCarrito.addEventListener("click", () =>{
     console.log("hola")
     pushbarContainer.append(pushbar)
 })
+
+realizarPedido();
