@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
 .logo img {
   width: 80px;
   margin-right: 40px;
@@ -43,7 +44,8 @@ h5 {
   font-size: 15px;
 }
 
-.mb-4, .my-4 {
+.mb-4,
+.my-4 {
   padding-top: 1.5rem !important;
 }
 
@@ -257,6 +259,7 @@ h5 {
     margin-left: 0px;
   }
 }
+/* pushbar */
 .pushbar {
   background-color: #111;
   color: #fff;
@@ -277,18 +280,68 @@ h5 {
 
 .pushbar-carrito {
   background-color: rgb(242, 242, 242);
-  width: 465px !important;
+  width: 565px !important;
   font-size: 18px;
   font-weight: 300px;
 }
 
 .carrito-titulo {
-  font-size: 20px;
+  font-size: 60px;
   text-align: center;
   margin-top: 20px;
+  font-family: "Passion One", cursive;
 }
 
 .icon-carrito {
   margin-top: 25px;
   border-width: 0px !important;
+}
+
+.pushbar-carrito-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d8d0d0;
+  padding: 10px;
+}
+.pushbar-carrito-content h3 {
+  font-size: 22px;
+}
+.pushbar-carrito-content h4 {
+  font-size: 12px;
+}
+.pushbar-carrito-content img {
+  width: 100px;
+}
+.pushbar-carrito-content p {
+  font-size: 12px;
+  color: black;
+}
+.pushbar-carrito-content input {
+  width: 55px;
+  height: 37px;
+}
+.pushbar-carrito-content i {
+  float: right;
+}
+
+.cantidad-carrito {
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  display: none;
+  top: 40px;
+  right: 413px;
+}
+
+.sumar {
+  cursor: pointer;
+}
+
+.restar {
+  cursor: pointer;
 }/*# sourceMappingURL=style2.css.map */

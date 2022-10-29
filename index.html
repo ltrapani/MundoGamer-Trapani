@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
-	<head>
+
+<head>
 	<title>Home • Mundo gamer</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,27 +16,30 @@
 	<link rel="stylesheet" href="./css/pushbar.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/style2.css">
-	</head>
+</head>
 
-	<body>
+<body>
 	<!-- top footer -->
 	<section class="ftco-section">
 		<div class="wrap">
 			<div class="container">
 				<div class="row justify-content-between">
 					<!-- numero telefono -->
-						<div class="col">
-							<p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">(+ 54 11) 4819-7000</a></p>
+					<div class="col">
+						<p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">(+ 54 11) 4819-7000</a></p>
+					</div>
+					<div class="col d-flex justify-content-end">
+						<div class="social-media">
+							<p class="mb-0 d-flex">
+								<a href="#" class="d-flex align-items-center justify-content-center"><span
+										class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+								<a href="#" class="d-flex align-items-center justify-content-center"><span
+										class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+								<a href="#" class="d-flex align-items-center justify-content-center"><span
+										class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+							</p>
 						</div>
-						<div class="col d-flex justify-content-end">
-							<div class="social-media">
-								<p class="mb-0 d-flex">
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-								</p>
-							</div>
-						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -47,7 +51,8 @@
 				<a class="navbar-brand" href="#"><span>Mundo</span>Gamer</a>
 
 				<!-- menu desplegable -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+					aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="fa fa-bars"></span> Menu
 				</button>
 				<div class="collapse navbar-collapse" id="ftco-nav">
@@ -57,24 +62,29 @@
 						<li class="nav-item"><a href="#" class="nav-link">Sobre nosotros</a></li>
 						<li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
 						<li class="nav-item">
-							<a href="#" id="login" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> Log In</a>
+							<a href="#" id="login" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> Log
+								In</a>
 							<!-- showbox login desplegable -->
 							<div class="full-width Login" id="boxlogin">
 								<p class="text-center">
 									<form action="">
 										<div class="form-group">
-											<label for="email"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail</label>
+											<label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>
+												E-mail</label>
 											<input type="text" class="form-control" name="email" id="email">
 										</div>
 										<div class="form-group">
-											<label for="password"><i class="fa fa-lock" aria-hidden="true"></i> Contraseña</label>
+											<label for="password"><i class="fa fa-lock" aria-hidden="true"></i>
+												Contraseña</label>
 											<input type="text" class="form-control" name="password" id="password">
 										</div>
 										<a href="#!">No recuerdo mi contraseña</a>
 										<br>
 										<p class="text-center">
-											<a href="#" class="btn btn-danger btn-login" id="cancelar" style="display:inline-block !important;">CANCELAR</a>
-											<button type="reset" class="btn btn-primary" onclick="capturarUsuario();">INICIAR SESIÓN</button>
+											<a href="#" class="btn btn-danger btn-login" id="cancelar"
+												style="display:inline-block !important;">CANCELAR</a>
+											<button type="reset" class="btn btn-primary"
+												onclick="capturarUsuario();">INICIAR SESIÓN</button>
 										</p>
 									</form>
 									<hr>
@@ -85,27 +95,33 @@
 						</li>
 
 						<!-- carrito -->
-						<li class="nav-item" id="verCarrito">
-							<div data-pushbar-id="pushbar-carrito" data-pushbar-direction="right" class="pushbar-carrito"><a href="" class="nav-link"></a>
+						<li class="nav-item">
+							<div data-pushbar-id="pushbar-carrito" data-pushbar-direction="right"
+								class="pushbar-carrito"><a href="" class="nav-link"></a>
+								<button data-pushbar-close class="icon-carrito" id="cerrarCarrito"><i
+										class="bi bi-backspace"></i></button>
 								<div id="pushbar-container">
-									<button data-pushbar-close class="btn-cerrar"><i class="bi bi-backspace"></i></button>
-								</div>	
+
+								</div>
+
 							</div>
-							<button data-pushbar-target="pushbar-carrito" class="icon-carrito"><i class="bi bi-cart-dash-fill"></i>
-						</li>
+							<button data-pushbar-target="pushbar-carrito" class="icon-carrito" id="verCarrito"><span
+									id="cantidadCarrito" class="cantidad-carrito"></span><i
+									class="bi bi-cart-dash-fill"></i>
+								<!-- </li> -->
 
 					</ul>
 				</div>
 			</div>
-			</nav>
-    <!-- FINAL nav -->
+		</nav>
+		<!-- FINAL nav -->
 	</section>
 
 	<!--carousel-->
 	<section class="banner">
 		<div class="banner-content">
 			<h1>Juga de la mejor forma</h1>
-			<a href="#">Conocenos</a>	
+			<a href="#">Conocenos</a>
 		</div>
 	</section>
 	<!-- FINAL carousel -->
@@ -119,38 +135,42 @@
 
 	<!-- footer -->
 	<footer id="footer" class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div>
-        <!-- Redes -->
-            <section class="mb-4">
-                <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="" target="__blank" role="button"><i class="bi bi-twitter"></i></a>
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="" target="__blank" role="button"><i class="bi bi-facebook"></i></a>
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="" target="_blank" role="button"><i class="bi bi-instagram"></i></a>
-            </section>
-        </div>
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright:
+		<!-- Grid container -->
+		<div>
+			<!-- Redes -->
+			<section class="mb-4">
+				<!-- Twitter -->
+				<a class="btn btn-outline-light btn-floating m-1" href="" target="__blank" role="button"><i
+						class="bi bi-twitter"></i></a>
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1" href="" target="__blank" role="button"><i
+						class="bi bi-facebook"></i></a>
+				<!-- Instagram -->
+				<a class="btn btn-outline-light btn-floating m-1" href="" target="_blank" role="button"><i
+						class="bi bi-instagram"></i></a>
+			</section>
+		</div>
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2022 Copyright:
 			<a class="text-white" href="#">MundoGamer</a>
-        </div>
-    </footer>
+		</div>
+	</footer>
 
 	<script src="./css/js-diseño/jquery.min.js"></script>
 	<script src="./css/js-diseño/bootstrap.min.js"></script>
 	<script src="./css/js-diseño/main.js"></script>
 	<script src="./js/pushbar.js"></script>
 	<script src="./js/productos.js"></script>
+	<script src="./js/carrito.js"></script>
 	<script src="./js/main.js"></script>
-	
+
 	<script>
 		var pushbar = new Pushbar({
 			blur: false,
-			overlay:false
+			overlay: false
 		});
 	</script>
-	</body>
-</html>
+</body>
 
+</html>
