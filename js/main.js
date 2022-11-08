@@ -1,9 +1,14 @@
 //variables globales
+const carritoContenido = document.getElementById("carritoContenido");
+const verCarrito = document.getElementById("verCarrito");
+const pushbarContainer = document.getElementById("pushbar-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 let login = false;
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //guarda el mail y password para logearse
 function capturarUsuario() {
-
+    
     function Persona(email, password) {
         this.email = email;
         this.password = password;
@@ -68,13 +73,8 @@ function deslogearUsuario() {
 }
 
 
-const carritoContenido = document.getElementById("carritoContenido");
-const verCarrito = document.getElementById("verCarrito");
-const pushbarContainer = document.getElementById("pushbar-container");
-const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
+// cargar productos
 productos.forEach((producto) => {
     let content = document.createElement("div");
     content.className = "card"
@@ -82,13 +82,15 @@ productos.forEach((producto) => {
     <img class="card-img-top" src="${producto.img}">
         <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-price">${producto.precio}</p>
+            <p class="card-price">$${producto.precio}</p>
             <p class="card-text">${producto.descripcion}</p>
     `;
 
     carritoContenido.append(content)
 
     let comprar = document.createElement("button");
+    comprar.setAttribute("id","btnAgregarCarrito")
+    comprar.setAttribute("oncliclk","mostrarAlert()")
     comprar.className = "btn btn-outline-primary";
     comprar.innerText = "Agregar al carrito";
     content.append(comprar);
@@ -127,7 +129,7 @@ const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-
+//contar si hay algo en el local store
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block";
     const carritoLength = carrito.length;
@@ -138,4 +140,23 @@ const carritoCounter = () => {
     }
 }
 
+//valor dolar
+function valorDolar(){
+    const URLDOLAR = "https://api.bluelytics.com.ar/v2/latest"
+    fetch(URLDOLAR)
+    .then (respuesta => respuesta.json())
+    .then (cotizaciones => {
+        const dolarBlue = cotizaciones.blue;
+        console.log(dolarBlue);
+        document.getElementById("valorDolar").innerHTML+=`
+        <p class="textoDolar">Ajustamos los mejores precios teniendo en cuenta la cotizacion del dolar a tiempo real!</p>
+        <p class="precioDolar">Dolar Compra: $ ${dolarBlue.value_buy}</p>
+        <p class="precioDolar">Dolar Venta: $ ${dolarBlue.value_sell}</p>
+        `;
+
+    })
+}
+
+valorDolar();
 carritoCounter();
+

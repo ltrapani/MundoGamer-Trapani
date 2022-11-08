@@ -26,8 +26,42 @@
 				<div class="row justify-content-between">
 					<!-- numero telefono -->
 					<div class="col">
-						<p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">(+ 54 11) 4819-7000</a></p>
+						<ul class="navbar-nav m-auto">
+							<li class="nav-item">
+								<a href="#" id="login" class="nav-link"><i class="bi bi-person"></i>
+									Log In</a>
+								<!-- showbox login desplegable -->
+								<div class="full-width Login" id="boxlogin">
+									<p class="text-center">
+										<form action="">
+											<div class="form-group">
+												<label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>
+													Nombre de Usuario</label>
+												<input type="text" class="form-control" name="email" id="email">
+											</div>
+											<div class="form-group">
+												<label for="password"><i class="fa fa-lock" aria-hidden="true"></i>
+													Contraseña</label>
+												<input type="text" class="form-control" name="password" id="password">
+											</div>
+											<a href="#!">No recuerdo mi contraseña</a>
+											<br>
+											<p class="text-center">
+												<a href="#" class="btn btn-danger btn-login" id="cancelar"
+													style="display:inline-block !important;">CANCELAR</a>
+												<button type="reset" class="btn btn-primary"
+													onclick="capturarUsuario();">INICIAR SESIÓN</button>
+											</p>
+										</form>
+										<hr>
+										<p class="text-center">¿Aún no tienes cuenta?</p>
+										<a href="#!">CRÉATE UNA GRATIS</a>
+									</p>
+								</div>
+							</li>
+						</ul>
 					</div>
+					<!-- redes -->
 					<div class="col d-flex justify-content-end">
 						<div class="social-media">
 							<p class="mb-0 d-flex">
@@ -49,7 +83,6 @@
 				<!-- logo -->
 				<div class="logo"><img src="./assets/img/rumboario.png" alt="logomundialqatar"></div>
 				<a class="navbar-brand" href="#"><span>Mundo</span>Gamer</a>
-
 				<!-- menu desplegable -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 					aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,41 +91,10 @@
 				<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav m-auto">
 						<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Catalogo</a></li>
+						<li class="nav-item"><a href="#catalogo" class="nav-link">Catalogo</a></li>
 						<li class="nav-item"><a href="#" class="nav-link">Sobre nosotros</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-						<li class="nav-item">
-							<a href="#" id="login" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> Log
-								In</a>
-							<!-- showbox login desplegable -->
-							<div class="full-width Login" id="boxlogin">
-								<p class="text-center">
-									<form action="">
-										<div class="form-group">
-											<label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>
-												E-mail</label>
-											<input type="text" class="form-control" name="email" id="email">
-										</div>
-										<div class="form-group">
-											<label for="password"><i class="fa fa-lock" aria-hidden="true"></i>
-												Contraseña</label>
-											<input type="text" class="form-control" name="password" id="password">
-										</div>
-										<a href="#!">No recuerdo mi contraseña</a>
-										<br>
-										<p class="text-center">
-											<a href="#" class="btn btn-danger btn-login" id="cancelar"
-												style="display:inline-block !important;">CANCELAR</a>
-											<button type="reset" class="btn btn-primary"
-												onclick="capturarUsuario();">INICIAR SESIÓN</button>
-										</p>
-									</form>
-									<hr>
-									<p class="text-center">¿Aún no tienes cuenta?</p>
-									<a href="#!">CRÉATE UNA GRATIS</a>
-								</p>
-							</div>
-						</li>
+						<li class="nav-item"><a href="./pages/forms.html" class="nav-link">Contacto</a></li>
+
 
 						<!-- carrito -->
 						<li class="nav-item">
@@ -108,8 +110,7 @@
 							<button data-pushbar-target="pushbar-carrito" class="icon-carrito" id="verCarrito"><span
 									id="cantidadCarrito" class="cantidad-carrito"></span><i
 									class="bi bi-cart-dash-fill"></i>
-								<!-- </li> -->
-
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -125,9 +126,11 @@
 		</div>
 	</section>
 	<!-- FINAL carousel -->
-
 	<!-- Cards -->
 	<section id="catalogo">
+		<h2 class="titulo-catalogo" id="catalogo">Nuestros productos</h2>
+		<hr>
+		<div id="valorDolar"> </div>
 		<div id="carritoContenido" class="card-deck">
 			<!-- cards creadas en js -->
 		</div>
@@ -164,6 +167,8 @@
 	<script src="./js/productos.js"></script>
 	<script src="./js/carrito.js"></script>
 	<script src="./js/main.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="./js/sweetalert.js"></script>
 
 	<script>
 		var pushbar = new Pushbar({
