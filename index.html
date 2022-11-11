@@ -35,7 +35,7 @@
 									<p class="text-center">
 										<form action="">
 											<div class="form-group">
-												<label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>
+												<label for="usuario"><i class="fa fa-envelope" aria-hidden="true"></i>
 													Nombre de Usuario</label>
 												<input type="text" class="form-control" name="email" id="email">
 											</div>
@@ -102,10 +102,15 @@
 								class="pushbar-carrito"><a href="" class="nav-link"></a>
 								<button data-pushbar-close class="icon-carrito" id="cerrarCarrito"><i
 										class="bi bi-backspace"></i></button>
+										
 								<div id="pushbar-container">
-
+									
 								</div>
-
+								<div id="btnsPushbar">
+								<button class="btn btn-outline-primary" onclick="carritoVacioAlert()">Completar compra</button>
+								<button class="btn btn-outline-primary" id="vaciarCarrito">Vaciar Carrito</button>
+								</div>
+								
 							</div>
 							<button data-pushbar-target="pushbar-carrito" class="icon-carrito" id="verCarrito"><span
 									id="cantidadCarrito" class="cantidad-carrito"></span><i
@@ -159,7 +164,9 @@
 			<a class="text-white" href="#">MundoGamer</a>
 		</div>
 	</footer>
-
+</button>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="./js/sweetalert.js"></script>
 	<script src="./css/js-diseño/jquery.min.js"></script>
 	<script src="./css/js-diseño/bootstrap.min.js"></script>
 	<script src="./css/js-diseño/main.js"></script>
@@ -167,8 +174,7 @@
 	<script src="./js/productos.js"></script>
 	<script src="./js/carrito.js"></script>
 	<script src="./js/main.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="./js/sweetalert.js"></script>
+	
 
 	<script>
 		var pushbar = new Pushbar({

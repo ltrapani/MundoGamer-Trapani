@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- Css -->
-    <link rel="stylesheet" href="../css/pushbar.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style2.css">
 
@@ -70,7 +69,7 @@
         <!-- FINAL nav -->
         <main>
             <form action="" class="formulario" id="formulario">
-                <!-- Grupo: Usuario -->
+                <!-- grupo Usuario -->
                 <div class="formulario__grupo" id="grupo__usuario">
                     <label for="usuario" class="formulario__label">Usuario</label>
                     <div class="formulario__grupo-input">
@@ -80,7 +79,7 @@
                     <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
                 </div>
     
-                <!-- Grupo: Nombre -->
+                <!-- grupo Nombre -->
                 <div class="formulario__grupo" id="grupo__nombre">
                     <label for="nombre" class="formulario__label">Nombre</label>
                     <div class="formulario__grupo-input">
@@ -90,7 +89,7 @@
                     <p class="formulario__input-error">El nombre tiene que ser ingresado tal cual figura en su Documento de Identidad</p>
                 </div>
     
-                <!-- Grupo: Contraseña -->
+                <!-- grupo Contraseña -->
                 <div class="formulario__grupo" id="grupo__password">
                     <label for="password" class="formulario__label">Contraseña</label>
                     <div class="formulario__grupo-input">
@@ -100,7 +99,7 @@
                     <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
                 </div>
     
-                <!-- Grupo: Contraseña 2 -->
+                <!-- grupo Contraseña 2 -->
                 <div class="formulario__grupo" id="grupo__password2">
                     <label for="password2" class="formulario__label">Repetir Contraseña</label>
                     <div class="formulario__grupo-input">
@@ -110,7 +109,7 @@
                     <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
                 </div>
     
-                <!-- Grupo: Correo Electronico -->
+                <!-- grupo Correo Electronico -->
                 <div class="formulario__grupo" id="grupo__correo">
                     <label for="correo" class="formulario__label">Correo Electrónico</label>
                     <div class="formulario__grupo-input">
@@ -120,7 +119,7 @@
                     <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
                 </div>
     
-                <!-- Grupo: Teléfono -->
+                <!-- grupo Teléfono -->
                 <div class="formulario__grupo" id="grupo__telefono">
                     <label for="telefono" class="formulario__label">Teléfono</label>
                     <div class="formulario__grupo-input">
@@ -130,7 +129,7 @@
                     <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
                 </div>
     
-                <!-- Grupo: Terminos y Condiciones -->
+                <!-- grupo Terminos y Condiciones -->
                 <div class="formulario__grupo" id="grupo__terminos">
                     <label class="formulario__label">
                         <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
@@ -139,10 +138,10 @@
                 </div>
     
                 <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, revise que el formulario haya sido completado correctamente</p>
                 </div>
     
-                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <div class="formulario__grupo formulario__grupo-btn-enviar" id="btnEnviaralert">
                     <button id="btnEnviar" type="submit" class="formulario__btn">Enviar</button>
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente! En la brevedad nos contactaremos con usted por Email</p>
                 </div>
@@ -173,12 +172,13 @@
             </div>
         </footer>
     </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../css/js-diseño/jquery.min.js"></script>
     <script src="../css/js-diseño/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="../css/js-diseño/main.js"></script>
     <script src="../js/forms.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 
 </body>
 

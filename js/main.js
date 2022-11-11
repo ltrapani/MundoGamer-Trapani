@@ -3,12 +3,17 @@ const carritoContenido = document.getElementById("carritoContenido");
 const verCarrito = document.getElementById("verCarrito");
 const pushbarContainer = document.getElementById("pushbar-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
+const vaciarCarrito = document.getElementById("vaciarCarrito")
+let carritoLength
 let login = false;
+//carrito y verificacion para despues imprimirlo con el localstorage
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+
+//(BOCETO)
 //guarda el mail y password para logearse
 function capturarUsuario() {
-    
+
     function Persona(email, password) {
         this.email = email;
         this.password = password;
@@ -26,16 +31,13 @@ function capturarUsuario() {
         logearUsuario();
     }
 }
-
 //pushea al usuario en la base de datos
 var baseDatos = [];
-
 function agregarUsuario() {
     baseDatos.push(nuevoUsuario);
     console.log(baseDatos);
     login = true;
 }
-
 //logea al usuario
 function logearUsuario() {
     let logear = document.getElementById("login");
@@ -43,6 +45,7 @@ function logearUsuario() {
     let boxlogin = document.getElementById("boxlogin")
     boxlogin.innerHTML = `<a href="#" class="btn btn-danger btn-login" id="cancelar" onclick="deslogearUsuario();" style="display:inline-block !important;">Log out</a>`;
 }
+
 
 //desloguea al usuario y da lugar a otro logeo
 function deslogearUsuario() {
@@ -73,8 +76,7 @@ function deslogearUsuario() {
 }
 
 
-
-// cargar productos
+// cargar productos en cards
 productos.forEach((producto) => {
     let content = document.createElement("div");
     content.className = "card"
@@ -88,20 +90,23 @@ productos.forEach((producto) => {
 
     carritoContenido.append(content)
 
+    //btn agregar carrito
     let comprar = document.createElement("button");
-    comprar.setAttribute("id","btnAgregarCarrito")
-    comprar.setAttribute("oncliclk","mostrarAlert()")
+    comprar.setAttribute("id", "btnAgregarCarrito")
+    comprar.setAttribute("onclick", "mostrarAlert()")
     comprar.className = "btn btn-outline-primary";
     comprar.innerText = "Agregar al carrito";
     content.append(comprar);
 
+    //descuento en cards
     let descuento = document.createElement("div");
     descuento.className = "card-footer";
     descuento.innerHTML = `
         <small >${producto.descuento}</small>
     `;
     content.append(descuento);
-
+    
+    //control de cantidad de un producto con su id
     comprar.addEventListener("click", () => {
         const repeat = carrito.some((repeatProducto) => repeatProducto.id === producto.id)
         if (repeat) {
@@ -124,15 +129,16 @@ productos.forEach((producto) => {
     })
 })
 
-//setear item
+
+//setear item del carrito
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-//contar si hay algo en el local store
+//contar si hay algo en el local storage
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block";
-    const carritoLength = carrito.length;
+    carritoLength = carrito.length;
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
     cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"))
     if (carrito.length === 0) {
@@ -140,23 +146,63 @@ const carritoCounter = () => {
     }
 }
 
-//valor dolar
-function valorDolar(){
+//valor dolar traida desde API con fetch
+function valorDolar() {
     const URLDOLAR = "https://api.bluelytics.com.ar/v2/latest"
     fetch(URLDOLAR)
-    .then (respuesta => respuesta.json())
-    .then (cotizaciones => {
-        const dolarBlue = cotizaciones.blue;
-        console.log(dolarBlue);
-        document.getElementById("valorDolar").innerHTML+=`
+        .then(respuesta => respuesta.json())
+        .then(cotizaciones => {
+            const dolarBlue = cotizaciones.blue;
+            console.log(dolarBlue);
+            let dolarPrecio = dolarBlue.value_buy
+            console.log("precio del dolar " + dolarPrecio)
+            document.getElementById("valorDolar").innerHTML += `
         <p class="textoDolar">Ajustamos los mejores precios teniendo en cuenta la cotizacion del dolar a tiempo real!</p>
         <p class="precioDolar">Dolar Compra: $ ${dolarBlue.value_buy}</p>
         <p class="precioDolar">Dolar Venta: $ ${dolarBlue.value_sell}</p>
         `;
 
-    })
+        })
 }
+
+//borro carro
+function borrarCarro(){
+    pushbarContainer.innerHTML = ""
+    const pushbarOn = document.createElement("div");
+    pushbarOn.className = "pushbar-carrito-header"
+    pushbarOn.setAttribute("id", "pushbarTittle");
+    pushbarOn.innerHTML = `
+    <h2 class="carrito-titulo">Carrito de compras</h2>
+    `;
+    pushbarContainer.append(pushbarOn);
+
+    let carritoContent = document.createElement("div");
+    carritoContent.innerHTML = ` `;
+    pushbarContainer.append(carritoContent)
+
+    //calculo de precio total
+    const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+    const totalComprar = document.createElement("div");
+    totalComprar.className = "pushbar-total-content";
+    totalComprar.setAttribute("id", "pushbarPrecioTotal");
+    totalComprar.innerHTML = `Total a pagar: ${total} $`;
+    pushbarContainer.append(totalComprar);
+
+    cantidadCarrito.style.display = "none";
+    }
+    
+
+//vacio el array y el local storage ademas de que imprimo el carro en blanco
+function vaciarCarro (){
+    carrito = []
+    localStorage.clear();
+    borrarCarro();
+}
+
+
+
+vaciarCarrito.addEventListener("click", vaciarCarro)
+
 
 valorDolar();
 carritoCounter();
-

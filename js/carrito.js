@@ -8,6 +8,7 @@ const imprimirCarrito = () => {
     `;
     pushbarContainer.append(pushbarOn);
 
+    //imprimo productos agregados al carrito
     carrito.forEach((producto) => {
         let carritoContent = document.createElement("div");
         carritoContent.className = "pushbar-carrito-content";
@@ -27,6 +28,7 @@ const imprimirCarrito = () => {
         pushbarContainer.append(carritoContent)
         console.log(carrito.length)
 
+        //btn restar 1 en cantidad del producto
         let restar = carritoContent.querySelector(".restar");
         restar.addEventListener("click", () => {
             if (producto.cantidad != 1) {
@@ -36,6 +38,7 @@ const imprimirCarrito = () => {
             imprimirCarrito();
         })
 
+        //btn sumar 1 en cantidad del producto
         let sumar = carritoContent.querySelector(".sumar");
         sumar.addEventListener("click", () => {
             producto.cantidad++;
@@ -43,6 +46,7 @@ const imprimirCarrito = () => {
             imprimirCarrito();
         })
 
+        //btn eliminar producto de carrito
         let eliminar = document.createElement("button")
         eliminar.className = "bi bi-bag-dash icon-carrito"
         carritoContent.append(eliminar);
@@ -51,6 +55,7 @@ const imprimirCarrito = () => {
         });
     })
 
+    //calculo de precio total
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
     const totalComprar = document.createElement("div");
     totalComprar.className = "pushbar-total-content";
@@ -58,13 +63,11 @@ const imprimirCarrito = () => {
     totalComprar.innerHTML = `Total a pagar: ${total} $`;
     pushbarContainer.append(totalComprar);
 
-    
-    
-
 };
 
 verCarrito.addEventListener("click", imprimirCarrito);
 
+//eliminar el producto seleccionado dependiendo de su id
 const eliminarProducto = (id) => {
     const foundId = carrito.find((element) => element.id === id);
     carrito = carrito.filter((carritoId) => {
