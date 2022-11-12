@@ -35,18 +35,6 @@ function carritoVacioAlert(){
     console.log("hola")
 }
 
-
-//alerta de formulario y compra completada exitosamente
-function enviarFormulario(){
-    Swal.fire({
-        position: 'end',
-        icon: 'success',
-        title: 'Formulario enviado exitosamente! En la brevedad nos contactaremos con usted por Email',
-        showConfirmButton: false,
-        timer: 5500,
-    })  
-    
-}
 //alerta de saludo al ingresar a la home page
 Swal.fire({
     title: 'Bienvenido a Mundo Gamer',
@@ -54,3 +42,4 @@ Swal.fire({
     timer: 4000,
     timerProgressBar: true,
 }) 
+

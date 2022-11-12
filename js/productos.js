@@ -4,7 +4,7 @@ const productos = [{
         precio: 13500,
         descripcion: "El HyperX Alloy Origins™ Core es un teclado tenkeyless ultra compacto y robusto que cuenta con interruptores mecánicos diseñados para brindarles a los gamers la mejor combinación de estilo, rendimiento y confiabilidad.",
         img: "./assets/img/card1.jpg",
-        descuento: "Paga un 21% en un solo pago o solo un 30% mas en 6 cuotas sin interes",
+        descuento: "Paga un 10%  menos en un solo pago o solo un 14% más en 6 cuotas sin interes",
         cantidad: 1,
     },
     {

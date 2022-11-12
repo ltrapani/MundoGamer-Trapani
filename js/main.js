@@ -10,7 +10,7 @@ let login = false;
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
-//(BOCETO)
+//(BOCETO)(no tiene valoracion de campo como el forms)
 //guarda el mail y password para logearse
 function capturarUsuario() {
 
@@ -32,7 +32,7 @@ function capturarUsuario() {
     }
 }
 //pushea al usuario en la base de datos
-var baseDatos = [];
+let  baseDatos = [];
 function agregarUsuario() {
     baseDatos.push(nuevoUsuario);
     console.log(baseDatos);
